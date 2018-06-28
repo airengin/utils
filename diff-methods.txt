@@ -1,0 +1,9 @@
+first----head(可选)
+pluck---map
+contains  ---- includes
+indexBy-----keyBy
+any-----some
+mapObject----mapValues
+max（使用第二个参数并且是方法的）-----maxBy
+uniq（使用第二个参数并且是方法的）-----uniqBy
+chain结尾必须加value（）
