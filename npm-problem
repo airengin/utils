@@ -1,0 +1,21 @@
+C:\Users\nannp>npm install -g npm
+npm ERR! path C:\Program Files\nodejs\npm.cmd
+npm ERR! code EEXIST
+npm ERR! Refusing to delete C:\Program Files\nodejs\npm.cmd: is outside C:\Program Files\nodejs\node_modules\npm and not a link
+npm ERR! File exists: C:\Program Files\nodejs\npm.cmd
+npm ERR! Move it away, and try again.
+
+
+
+解决：
+Since this IS a Windows problem, save and run this in a .bat file:
+
+pushd C:\Program Files\nodejs\nodejs
+del npm npm.cmd
+move node_modules\npm node_modules\npm2
+call node node_modules\npm2\bin\npm-cli.js i npm@latest -g
+rmdir /S /Q node_modules\npm2
+popd
+pause
+
+Worked perfectly to get npm to V6.4.1
