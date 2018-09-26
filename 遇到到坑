@@ -1,1 +1,8 @@
-react-router升级到4版本时候，history需要升级，升级后原来History改为小写，webpack中配置时需要修改，不然打包报错
+一、react
+ react-router升级到4版本时候，history需要升级，升级后原来History改为小写，webpack中配置时需要修改，不然打包报错
+
+二、npm install报错
+   integrity checksum failed when using sha1: wanted sha1-7Qoe24fAXU2xA3xfj0g9ijtfCCU= but got sha1-psC74fOPOqC5Ijjstv9Cw0TUE10=.
+   搜了很多原因，大部分说使用npm cache clean  npm cache verify等等，都不行。
+   但是发现其他相同框架项目运行没问题，就觉得是某个npm包有问题，
+   于是删除某些可能出问题的包，一步步排查，发现是json-server的问题，删除后执行npm install通过。但是还是不清楚原因。
