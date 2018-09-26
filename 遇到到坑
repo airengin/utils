@@ -1,0 +1,1 @@
+react-router升级到4版本时候，history需要升级，升级后原来History改为小写，webpack中配置时需要修改，不然打包报错
